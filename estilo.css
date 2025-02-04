@@ -252,13 +252,13 @@ body {
   display: none;
   position: fixed;
   text-align: center;
-  background-color: #5a92a0;
+  background-color: #01151a;
   width: 200px;
   height: 90px;
   border: 15px solid gray;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-  right: 990px;
+  right: 1000px;
   top: 80px;
 }
   
