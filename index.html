@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <title>Tres en raya</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="icon" href="delete_unapprove_discard_remove_x_red_icon-icons.com_55984.ico" type="image/x-icon">
+</head>
+<body>
+    <div id="pantalla-inicio">
+        <h1>Bienvenido/a al tres en raya</h1>
+        <button id="inicio">Iniciar partida</button>
+    </div>
+    <div id="tabla-juego" style="display: none;">
+        <div class="celda"></div>
+        <div class="celda"></div>
+        <div class="celda"></div>
+        <div class="celda"></div>
+        <div class="celda"></div>
+        <div class="celda"></div>
+        <div class="celda"></div>
+        <div class="celda"></div>
+        <div class="celda"></div>
+    </div>
+    
+    <div id="contador">
+        <h2 style="color: antiquewhite;">Partidas jugadas: <span id="partidas">0</span></h2>
+    </div>
+    <div id="marcador">
+        <p id="ganador-x" style="color: wheat;">Victorias de X: 0</p>
+        <p id="ganador-o" style="color: wheat;">Victorias de O: 0</p>
+        <p id="empates" style="color: wheat;">Empates: 0</p>
+    </div>
+
+    <button class="boton-elegante" id="reiniciar">Reiniciar</button>
+    <div id="ayuda-container">
+        <button id="abrir-ayuda">¿Cómo jugar?</button>
+        <div id="panel-ayuda" class="oculto">
+            <div class="contenido-ayuda">
+                <h2>Como jugar</h2>
+                <p>El juego del tres en raya consiste en alinear tres de tus símbolos (X o O) en una fila, columna o diagonal antes de que lo haga tu oponente.</p>
+                <ul>
+                    <li>Puedes elegir entre X e O.</li>
+                    <li>Puedes jugar contra un amigo/a.</li>
+                    <li>El juego termina cuando alguien gana o hay un empate.</li>
+                </ul>
+                <button id="cerrar-ayuda">Cerrar</button>
+            </div>
+        </div>
+    </div>
+    <button id="Cambiarfondo" onclick="cambiarColor()">Oscuro</button>
+
+    <div id="container">
+        <h1>Cronómetro</h1>
+        <div class="time-display">00:00:00</div>
+        <div class="controls">
+          <div id="start"></div> 
+          <div id="stop"></div> 
+          <div id="reset"></div>
+        </div>
+      </div>
+    <script src="script.js"></script>
+</body>
+</html>

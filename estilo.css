@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Warang+Citi&family=Orbitron:wght@400..900&display=swap');
+
+
+body {
+  background-color: #494141; 
+  color: #ffffff;
+}
+
+/* Pantalla de inicio*/
+
+#pantalla-inicio {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  color:wheat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  text-align: center;
+  z-index: 1000;
+}
+
+#inicio {
+  background: #fbca1f;
+  font-family: inherit;
+  padding: 0.6em 1.3em;
+  font-weight: 900;
+  font-size: 15px;
+  border: 3px solid black;
+  border-radius: 0.4em;
+  box-shadow: 1.6px 1.6px;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+#inicio:hover {
+  transition: all .3s ease-in-out;
+  transform: scale(1.1);
+  box-shadow: 0 5px 9px rgba(235, 231, 231, 0.8);
+}
+
+#inicio:active {
+  transform: translate(0.8px, 0.8px);
+  box-shadow: 0 5px 9px rgba(206, 34, 34, 0.8);
+}
+
+/* Tablero de juego*/
+
+#tabla-juego {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 320px;
+  height: 320px;
+  margin: 0 auto;
+  gap: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5), 0 0 20px #a15e06;
+    
+}
+
+.celda {
+    box-sizing: border-box;
+    width: 100px; 
+    height: 100px; 
+    background-color: #000000; 
+    border: 1px solid #444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: #f0f0f0;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.celda:hover {
+  background-color: #00000000;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #4704ff;
+}
+
+/* Panel de ayuda */
+
+#ayuda-container {
+  text-align: center;
+  margin: 20px auto;
+}
+
+#abrir-ayuda {
+  background: #fbca1f;
+  font-family: inherit;
+  padding: 0.6em 1.3em;
+  position: absolute;
+  font-weight: 900;
+  font-size: 18px;
+  border: 3px solid black;
+  right: 890px;
+  border-radius: 0.4em;
+  box-shadow: 0.1em 0.1em;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+#abrir-ayuda:hover {
+  transition: all .3s ease-in-out;
+  transform: scale(1.1);
+  box-shadow: 0 5px 9px rgba(235, 231, 231, 0.8);
+}
+
+#abrir-ayuda:active {
+  transform: translate(0.8px, 0.8px);
+  box-shadow: 0 5px 9px rgba(206, 34, 34, 0.8);
+}
+
+#panel-ayuda {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.contenido-ayuda {
+  background-color: white;
+  padding: 20px;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 10px;
+  color: #000000;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contenido-ayuda h2 {
+  margin-top: 0;
+}
+
+#cerrar-ayuda {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #FF4136;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.oculto {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Partidas jugadas */
+
+#contador {
+    font-size: 14px;
+    margin: 0px 0 5px 0;
+    color: #000000;
+    text-align: center;
+    position: relative;
+    top: 10px;
+    margin-top: 10px;
+}
+
+/* Victoria-perder X O */
+
+#marcador {
+  margin-top: 10px;
+  font-size: 20px;
+  text-align: center;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Boton de reiniciar partida */
+
+.boton-elegante {
+  position: absolute;
+  background: #fbca1f;
+  font-family: inherit;
+  padding: 0.6em 1.3em;
+  font-weight: 900;
+  font-size: 18px;
+  right: 700px;
+  border: 3px solid black;
+  border-radius: 6px;
+  box-shadow: 1.6px 1.6px;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+  
+.boton-elegante:hover {
+  transition: all .3s ease-in-out;
+  transform: scale(1.1);
+  box-shadow: 0 5px 9px rgba(235, 231, 231, 0.8);
+}
+  
+.boton-elegante:active {
+  transform: translate(0.8px, 0.8px);
+  box-shadow: 0 5px 9px rgba(206, 34, 34, 0.8);
+}
+
+/* Boton de cambiar fondo */
+
+#Cambiarfondo {
+  position: absolute;
+  background: #fbca1f;
+  font-family: inherit;
+  padding: 0.6em 1.3em;
+  font-weight: 900;
+  font-size: 18px;
+  right: 550px;
+  border: 3px solid black;
+  border-radius: 6px;
+  box-shadow: 1.6px 1.6px;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+#Cambiarfondo:hover {
+  transition: all .3s ease-in-out;
+  transform: scale(1.1);
+  box-shadow: 0 5px 9px rgba(235, 231, 231, 0.8);
+}
+
+#Cambiarfondo:active {
+  transform: translate(0.8px, 0.8px);
+  box-shadow: 0 5px 9px rgba(206, 34, 34, 0.8);
+}
+
+/* Cronometro */
+
+#container {
+  
+  display: none;
+  position: fixed;
+  text-align: center;
+  background-color: #5a92a0;
+  width: 200px;
+  height: 90px;
+  border: 15px solid gray;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  right: 990px;
+  top: 80px;
+}
+  
+.time-display {
+  font-family: "Orbitron", serif;
+  font-size: 20px;
+  font-style: normal;
+}
+
+h1 {
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 20px;
+} 
+  
+  
+::selection {
+    background-color: #ff0000;
+    color: #ffffff;
+    text-shadow: none;
+}
